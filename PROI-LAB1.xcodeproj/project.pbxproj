@@ -8,9 +8,9 @@
 
 /* Begin PBXFileReference section */
 		9012363B1829A73400E3A78B /* CLI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CLI.cpp; sourceTree = "<group>"; };
-		9012363C1829A73400E3A78B /* CLI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CLI.h; path = ../src/CLI.h; sourceTree = "<group>"; };
 		9012363D1829A93500E3A78B /* CircularBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CircularBuffer.cpp; sourceTree = "<group>"; };
-		9012363E1829A93500E3A78B /* CircularBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CircularBuffer.h; path = ../src/CircularBuffer.h; sourceTree = "<group>"; };
+		9012363F1829BB1700E3A78B /* CircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularBuffer.h; sourceTree = "<group>"; };
+		901236401829BB1700E3A78B /* CLI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLI.h; sourceTree = "<group>"; };
 		905C13FE18299DC8001F9FEE /* Makefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; fileEncoding = 4; path = Makefile; sourceTree = "<group>"; };
 		905C13FF18299DC8001F9FEE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		905C140118299DC8001F9FEE /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -27,8 +27,8 @@
 		905C13FD18299DC8001F9FEE /* include */ = {
 			isa = PBXGroup;
 			children = (
-				9012363E1829A93500E3A78B /* CircularBuffer.h */,
-				9012363C1829A73400E3A78B /* CLI.h */,
+				9012363F1829BB1700E3A78B /* CircularBuffer.h */,
+				901236401829BB1700E3A78B /* CLI.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
