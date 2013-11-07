@@ -20,13 +20,12 @@ TARGET=$(BINDIR)/cb
 
 # settings
 CXXFLAGS=-g
-INC=-I include
 SOURCES=$(SRCDIR)/main.cpp $(SRCDIR)/CLI.cpp $(SRCDIR)/CircularBuffer.cpp
 
 all: $(TARGET)
 
 $(TARGET): $(SOURCES)
-	$(CXX) $(CXXFLAGS) $(INC) -o $(TARGET) $(SOURCES)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SOURCES)
 
 clean:
 	rm -rf bin/*

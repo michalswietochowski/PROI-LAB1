@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		9012363B1829A73400E3A78B /* CLI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CLI.cpp; sourceTree = "<group>"; };
 		9012363D1829A93500E3A78B /* CircularBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CircularBuffer.cpp; sourceTree = "<group>"; };
-		9012363F1829BB1700E3A78B /* CircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularBuffer.h; sourceTree = "<group>"; };
-		901236401829BB1700E3A78B /* CLI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLI.h; sourceTree = "<group>"; };
 		905C13FE18299DC8001F9FEE /* Makefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; fileEncoding = 4; path = Makefile; sourceTree = "<group>"; };
 		905C13FF18299DC8001F9FEE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		905C140118299DC8001F9FEE /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		BFF6717721377B16E4999370 /* CircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularBuffer.h; sourceTree = "<group>"; };
+		BFF67B14FA9BBD8BF49F964F /* CLI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLI.h; sourceTree = "<group>"; };
+		BFF67F1DD690C655A596209C /* CLI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CLI.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -24,20 +24,13 @@
 			path = bin;
 			sourceTree = "<group>";
 		};
-		905C13FD18299DC8001F9FEE /* include */ = {
-			isa = PBXGroup;
-			children = (
-				9012363F1829BB1700E3A78B /* CircularBuffer.h */,
-				901236401829BB1700E3A78B /* CLI.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
 		905C140018299DC8001F9FEE /* src */ = {
 			isa = PBXGroup;
 			children = (
 				9012363D1829A93500E3A78B /* CircularBuffer.cpp */,
-				9012363B1829A73400E3A78B /* CLI.cpp */,
+				BFF6717721377B16E4999370 /* CircularBuffer.h */,
+				BFF67F1DD690C655A596209C /* CLI.cpp */,
+				BFF67B14FA9BBD8BF49F964F /* CLI.h */,
 				905C140118299DC8001F9FEE /* main.cpp */,
 			);
 			path = src;
@@ -54,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				905C13FC18299DC8001F9FEE /* bin */,
-				905C13FD18299DC8001F9FEE /* include */,
 				905C13FE18299DC8001F9FEE /* Makefile */,
 				905C13FF18299DC8001F9FEE /* README.md */,
 				905C140018299DC8001F9FEE /* src */,
@@ -208,6 +200,7 @@
 				901236391829A02100E3A78B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90F0790818299D6400570A99 /* Build configuration list for PBXProject "PROI-LAB1" */ = {
 			isa = XCConfigurationList;
