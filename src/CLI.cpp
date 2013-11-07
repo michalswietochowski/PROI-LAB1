@@ -115,6 +115,7 @@ void CLI::showMenu()
                 CircularBuffer testBuffer(BUFFER_SIZE);
                 CircularBufferTest tester(testBuffer);
                 tester.runTests();
+                cin.ignore(std::numeric_limits<streamsize>::max(),'\n');
                 break;
         }
     } while (choice);
