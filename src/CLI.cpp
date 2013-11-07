@@ -10,11 +10,19 @@
 #include <limits>
 #include "CLI.h"
 
+/**
+ * Set buffer object
+ * @param CircularBuffer& buffer
+ */
 void CLI::setBuffer(CircularBuffer &buffer)
 {
     this->buffer = buffer;
 }
 
+/**
+ * Runs add to buffer action
+ * @return void
+ */
 void CLI::addElement()
 {
     Element element;
@@ -33,6 +41,10 @@ void CLI::addElement()
     buffer.write(element);
 }
 
+/**
+ * Runs read from buffer action
+ * @return void
+ */
 void CLI::readElement()
 {
     Element* element;
@@ -44,6 +56,10 @@ void CLI::readElement()
     wait();
 }
 
+/**
+ * Runs clear buffer action
+ * @return void
+ */
 void CLI::clearBuffer()
 {
     buffer.clear();
@@ -51,6 +67,10 @@ void CLI::clearBuffer()
     wait();
 }
 
+/**
+ * Prints prompt to press ENTER key and waits
+ * @return void
+ */
 void CLI::wait()
 {
     cout << endl << "Press ENTER to continue...";
@@ -58,12 +78,21 @@ void CLI::wait()
     cin.ignore(std::numeric_limits<streamsize>::max(),'\n');
 }
 
+/**
+ * Runs loop showing menu and asking for choice
+ * @return void
+ */
 void CLI::showMenu()
 {
     int choice;
     
     do {
         clearScreen();
+        Element element;
+        buffer = 159 + buffer;
+        buffer >> element;
+//        buffer << 15;
+        cout << "Test: " << element.intVal << endl;
         cout << "Circular Buffer" << endl << endl;
         cout << buffer << endl << endl;
         cout << "1. Add element to buffer" << endl;
@@ -89,6 +118,10 @@ void CLI::showMenu()
     } while (choice);
 }
 
+/**
+ * Clears console screen
+ * @return void
+ */
 void CLI::clearScreen()
 {
     for (int i = 0; i < 60; i++) {

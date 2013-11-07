@@ -8,6 +8,10 @@
 
 #include "CircularBuffer.h"
 
+/**
+ * Constructor
+ * @param int size size of buffer
+ */
 CircularBuffer::CircularBuffer(int size)
 {
     this->size = size;
@@ -169,7 +173,122 @@ string CircularBuffer::toString()
     return bufferAsString;
 }
 
-ostream & operator<< (ostream &output, CircularBuffer &buffer)
+/**
+ * Write int value to buffer
+ * @param int value
+ * @return CircularBuffer&
+ */
+CircularBuffer& CircularBuffer::operator+=(int value)
+{
+    Element element;
+    element.intVal = value;
+    this->write(element);
+    return *this;
+}
+
+/**
+ * Write Element to buffer
+ * @param Element element
+ * @return CircularBuffer&
+ */
+CircularBuffer& CircularBuffer::operator+=(Element element)
+{
+    this->write(element);
+    return *this;
+}
+
+/**
+ * Shorthand for toString() method
+ * @param ostream output
+ * @param CircularBuffer& buffer
+ * @return ostream&
+ */
+ostream& operator<<(ostream &output, CircularBuffer &buffer)
 {
     return output << buffer.toString();
 }
+
+/**
+ * Read Element from buffer
+ * @param CircularBuffer buffer
+ * @param Element& element
+ * @return Element&
+ */
+Element& operator>>(CircularBuffer buffer, Element &element)
+{
+    if (!buffer.isEmpty()) {
+        element.intVal = buffer.read()->intVal;
+    }
+    return element;
+}
+
+/**
+ * Write int value to buffer (other way - by << operator)
+ * @param CircularBuffer buffer
+ * @param int value
+ * @return CircularBuffer
+ */
+CircularBuffer operator<<(CircularBuffer buffer, int value)
+{
+    buffer += value;
+    return buffer;
+}
+
+/**
+ * Write Element to buffer (other way - by << operator)
+ * @param CircularBuffer buffer
+ * @param Element element
+ * @return CircularBuffer
+ */
+CircularBuffer operator<<(CircularBuffer buffer, Element element)
+{
+    buffer += element;
+    return buffer;
+}
+
+/**
+ * Write int value to buffer (other way - by + operator)
+ * @param CircularBuffer buffer
+ * @param int value
+ * @return CircularBuffer
+ */
+CircularBuffer operator+(CircularBuffer buffer, int value)
+{
+    buffer += value;
+    return buffer;
+}
+
+/**
+ * Write int value to buffer (other way - by + operator commutative)
+ * @param int value
+ * @param CircularBuffer buffer
+ * @return CircularBuffer
+ */
+CircularBuffer operator+(int value, CircularBuffer buffer)
+{
+    return buffer + value;
+}
+
+/**
+ * Write Element to buffer (other way - by + operator)
+ * @param CircularBuffer buffer
+ * @param Element element
+ * @return CircularBuffer
+ */
+CircularBuffer operator+(CircularBuffer buffer, Element element)
+{
+    buffer += element;
+    return buffer;
+}
+
+/**
+ * Write Element to buffer (other way - by + operator commutative)
+ * @param Element element
+ * @param CircularBuffer buffer
+ * @return CircularBuffer
+ */
+CircularBuffer operator+(Element element, CircularBuffer buffer)
+{
+    return buffer + element;
+}
+

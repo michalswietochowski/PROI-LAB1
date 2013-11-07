@@ -15,6 +15,9 @@
 
 using namespace std;
 
+/**
+ * Buffer Element type
+ */
 typedef struct {
     int intVal;
     float floatVal;
@@ -41,6 +44,10 @@ class CircularBuffer
     Element *elements;
     
 public:
+    /**
+     * Constructor
+     * @param int size size of buffer
+     */
     CircularBuffer(int size);
     
     /*
@@ -82,8 +89,76 @@ public:
      * @return string
      */
     string toString();
+    
+    /**
+     * Write int value to buffer
+     * @param int value
+     * @return CircularBuffer&
+     */
+    CircularBuffer& operator+=(int value);
+    /**
+     * Write Element to buffer
+     * @param Element element
+     * @return CircularBuffer&
+     */
+    CircularBuffer& operator+=(Element element);
 };
 
-ostream & operator<< (ostream &output, CircularBuffer &buffer);
+/**
+ * Shorthand for toString() method
+ * @param ostream output
+ * @param CircularBuffer& buffer
+ * @return ostream&
+ */
+ostream& operator<<(ostream &output, CircularBuffer &buffer);
+/**
+ * Read Element from buffer
+ * @param CircularBuffer buffer
+ * @param Element& element
+ * @return Element&
+ */
+Element& operator>>(CircularBuffer buffer, Element &element);
+/**
+ * Write int value to buffer (other way - by << operator)
+ * @param CircularBuffer buffer
+ * @param int value
+ * @return CircularBuffer
+ */
+CircularBuffer operator<<(CircularBuffer buffer, int value);
+/**
+ * Write Element to buffer (other way - by << operator)
+ * @param CircularBuffer buffer
+ * @param Element element
+ * @return CircularBuffer
+ */
+CircularBuffer operator<<(CircularBuffer buffer, Element element);
+/**
+ * Write int value to buffer (other way - by + operator)
+ * @param CircularBuffer buffer
+ * @param int value
+ * @return CircularBuffer
+ */
+CircularBuffer operator+(CircularBuffer buffer, int value);
+/**
+ * Write int value to buffer (other way - by + operator commutative)
+ * @param int value
+ * @param CircularBuffer buffer
+ * @return CircularBuffer
+ */
+CircularBuffer operator+(int value, CircularBuffer buffer);
+/**
+ * Write Element to buffer (other way - by + operator)
+ * @param CircularBuffer buffer
+ * @param Element element
+ * @return CircularBuffer
+ */
+CircularBuffer operator+(CircularBuffer buffer, Element element);
+/**
+ * Write Element to buffer (other way - by + operator commutative)
+ * @param Element element
+ * @param CircularBuffer buffer
+ * @return CircularBuffer
+ */
+CircularBuffer operator+(Element element, CircularBuffer buffer);
 
 #endif /* defined(__PROI_LAB1__CircularBuffer__) */
