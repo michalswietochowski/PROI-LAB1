@@ -10,25 +10,78 @@
 #define __PROI_LAB1__CircularBuffer__
 
 #include <cstdlib>
+#include <iostream>
+#include <string>
+
+using namespace std;
 
 typedef struct {
-    int value;
+    int intVal;
+    float floatVal;
+    string stringVal;
 } Element;
 
 class CircularBuffer
 {
-    //maximum size of elements
+    /**
+     * size of buffer
+     */
     int size;
-    //oldest element index
+    /**
+     * oldest element index
+     */
     int start;
-    //index for new element
-    int end;
-    //vector of elements
+    /**
+     * elements count
+     */
+    int count;
+    /**
+     * vector of elements
+     */
     Element *elements;
+    
 public:
     CircularBuffer(int size);
     
+    /*
+     * Getters
+     */
     int getSize() { return size; }
+    int getStart() { return start; }
+    int getCount() { return count; }
+    Element* getElements() { return elements; }
+    
+    /**
+     * Write to buffer
+     * @param Element element
+     * @return void
+     */
+    void write(Element &element);
+    /**
+     * Read from buffer
+     * @return Element
+     */
+    Element* read();
+    /**
+     * Clears the buffer and resets pointers
+     * @return void
+     */
+    void clear();
+    /**
+     * Tells if buffer is empty
+     * @return int
+     */
+    int isEmpty();
+    /**
+     * Tells if buffer is full
+     * @return int
+     */
+    int isFull();
+    /**
+     * Represent buffer as string to print in console
+     * @return string
+     */
+    string toString();
 };
 
 #endif /* defined(__PROI_LAB1__CircularBuffer__) */

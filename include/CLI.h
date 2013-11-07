@@ -22,8 +22,13 @@ public:
     void setBuffer(CircularBuffer &buffer);
     
     CircularBuffer getBuffer() { return this->buffer; }
-    
+  
+    void clearScreen();
     void showMenu();
+    void addElement();
+    void readElement();
+    void clearBuffer();
+    void wait();
 };
 
 #endif /* defined(__PROI_LAB1__CLI__) */
