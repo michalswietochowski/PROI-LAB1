@@ -58,24 +58,73 @@ void CircularBufferTest::runTests()
     buffer << val;
     
     //test 7
-    Element element4;
-    cout << "7. CircularBuffer >> Element...";
-    buffer >> element4;
-    cout << " Result: " << element4.intVal << endl << endl;
-    
-    //test 8
     val = 16;
     Element element5;
     element5.intVal = val;
-    cout << "8. CircularBuffer << Element(" << element5.intVal << ")..." << endl << endl;
+    cout << "7. CircularBuffer << Element(" << element5.intVal << ")..." << endl << endl;
     buffer << element5;
     
+    //read
+    Element element4;
+    cout << "Read last two elements...";
+    buffer >> element4;
+    cout << " Results: " << element4.intVal;
+    Element element6;
+    buffer >> element6;
+    cout << " " << element6.intVal << endl << endl;
+    
+    //test 8
+    val = 32;
+    cout << "8. CircularBuffer += int(" << val << ")..." << endl << endl;
+    buffer += val;
     
     //test 9
-    Element element6;
-    cout << "7. CircularBuffer >> Element...";
-    buffer >> element6;
-    cout << " Result: " << element6.intVal << endl << endl;
+    val = 64;
+    Element element8;
+    element8.intVal = val;
+    cout << "9. CircularBuffer += Element(" << element8.intVal << ")..." << endl << endl;
+    buffer << element8;
+    
+    //read
+    Element element9;
+    cout << "Read last two elements...";
+    buffer >> element9;
+    cout << " Results: " << element9.intVal;
+    Element element10;
+    buffer >> element10;
+    cout << " " << element10.intVal << endl << endl;
+    
+    //test 10
+    val = 128;
+    cout << "10. CircularBuffer = CircularBuffer + int(" << val << ")..." << endl << endl;
+    buffer = buffer + val;
+    
+    //test 11
+    val = 256;
+    cout << "11. CircularBuffer = int(" << val << ") + CircularBuffer..." << endl << endl;
+    buffer = val + buffer;
+    
+    //test 12
+    val = 512;
+    Element element11;
+    element11.intVal = val;
+    cout << "12. CircularBuffer = CircularBuffer + Element(" << element11.intVal << ")..." << endl << endl;
+    buffer = buffer + element11;
+    
+    //test 13
+    val = 1024;
+    Element element12;
+    element12.intVal = val;
+    cout << "13. CircularBuffer = Element(" << element12.intVal << ") + CircularBuffer..." << endl << endl;
+    buffer = buffer + element12;
+    
+    cout << buffer << endl << endl;
+    
+    //test 14
+    cout << "14. Clear buffer..." << endl;
+    buffer.clear();
+    
+    cout << buffer << endl << endl;
     
     cout << endl << "Press ENTER to continue...";
     cin.ignore(std::numeric_limits<streamsize>::max(),'\n');
