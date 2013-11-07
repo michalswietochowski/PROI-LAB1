@@ -11,6 +11,8 @@
 		905C13FE18299DC8001F9FEE /* Makefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; fileEncoding = 4; path = Makefile; sourceTree = "<group>"; };
 		905C13FF18299DC8001F9FEE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		905C140118299DC8001F9FEE /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		907200EE182BD09100E533D3 /* CircularBufferTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CircularBufferTest.cpp; sourceTree = "<group>"; };
+		907200EF182BD09100E533D3 /* CircularBufferTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircularBufferTest.h; sourceTree = "<group>"; };
 		BFF6717721377B16E4999370 /* CircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularBuffer.h; sourceTree = "<group>"; };
 		BFF67B14FA9BBD8BF49F964F /* CLI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLI.h; sourceTree = "<group>"; };
 		BFF67F1DD690C655A596209C /* CLI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CLI.cpp; sourceTree = "<group>"; };
@@ -29,6 +31,8 @@
 			children = (
 				9012363D1829A93500E3A78B /* CircularBuffer.cpp */,
 				BFF6717721377B16E4999370 /* CircularBuffer.h */,
+				907200EE182BD09100E533D3 /* CircularBufferTest.cpp */,
+				907200EF182BD09100E533D3 /* CircularBufferTest.h */,
 				BFF67F1DD690C655A596209C /* CLI.cpp */,
 				BFF67B14FA9BBD8BF49F964F /* CLI.h */,
 				905C140118299DC8001F9FEE /* main.cpp */,

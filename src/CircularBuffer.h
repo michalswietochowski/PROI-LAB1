@@ -117,48 +117,48 @@ ostream& operator<<(ostream &output, CircularBuffer &buffer);
  * @param Element& element
  * @return Element&
  */
-Element& operator>>(CircularBuffer buffer, Element &element);
+Element& operator>>(CircularBuffer &buffer, Element &element);
 /**
  * Write int value to buffer (other way - by << operator)
  * @param CircularBuffer buffer
  * @param int value
  * @return CircularBuffer
  */
-CircularBuffer operator<<(CircularBuffer buffer, int value);
+CircularBuffer& operator<<(CircularBuffer &buffer, int value);
 /**
  * Write Element to buffer (other way - by << operator)
  * @param CircularBuffer buffer
  * @param Element element
  * @return CircularBuffer
  */
-CircularBuffer operator<<(CircularBuffer buffer, Element element);
+CircularBuffer& operator<<(CircularBuffer &buffer, Element element);
 /**
  * Write int value to buffer (other way - by + operator)
  * @param CircularBuffer buffer
  * @param int value
  * @return CircularBuffer
  */
-CircularBuffer operator+(CircularBuffer buffer, int value);
+CircularBuffer& operator+(CircularBuffer &buffer, int value);
 /**
  * Write int value to buffer (other way - by + operator commutative)
  * @param int value
  * @param CircularBuffer buffer
  * @return CircularBuffer
  */
-CircularBuffer operator+(int value, CircularBuffer buffer);
+CircularBuffer& operator+(int value, CircularBuffer &buffer);
 /**
  * Write Element to buffer (other way - by + operator)
  * @param CircularBuffer buffer
  * @param Element element
  * @return CircularBuffer
  */
-CircularBuffer operator+(CircularBuffer buffer, Element element);
+CircularBuffer& operator+(CircularBuffer &buffer, Element element);
 /**
  * Write Element to buffer (other way - by + operator commutative)
  * @param Element element
  * @param CircularBuffer buffer
  * @return CircularBuffer
  */
-CircularBuffer operator+(Element element, CircularBuffer buffer);
+CircularBuffer& operator+(Element element, CircularBuffer &buffer);
 
 #endif /* defined(__PROI_LAB1__CircularBuffer__) */

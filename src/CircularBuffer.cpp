@@ -214,7 +214,7 @@ ostream& operator<<(ostream &output, CircularBuffer &buffer)
  * @param Element& element
  * @return Element&
  */
-Element& operator>>(CircularBuffer buffer, Element &element)
+Element& operator>>(CircularBuffer &buffer, Element &element)
 {
     if (!buffer.isEmpty()) {
         element.intVal = buffer.read()->intVal;
@@ -228,7 +228,7 @@ Element& operator>>(CircularBuffer buffer, Element &element)
  * @param int value
  * @return CircularBuffer
  */
-CircularBuffer operator<<(CircularBuffer buffer, int value)
+CircularBuffer& operator<<(CircularBuffer &buffer, int value)
 {
     buffer += value;
     return buffer;
@@ -240,7 +240,7 @@ CircularBuffer operator<<(CircularBuffer buffer, int value)
  * @param Element element
  * @return CircularBuffer
  */
-CircularBuffer operator<<(CircularBuffer buffer, Element element)
+CircularBuffer& operator<<(CircularBuffer &buffer, Element element)
 {
     buffer += element;
     return buffer;
@@ -252,7 +252,7 @@ CircularBuffer operator<<(CircularBuffer buffer, Element element)
  * @param int value
  * @return CircularBuffer
  */
-CircularBuffer operator+(CircularBuffer buffer, int value)
+CircularBuffer& operator+(CircularBuffer &buffer, int value)
 {
     buffer += value;
     return buffer;
@@ -264,7 +264,7 @@ CircularBuffer operator+(CircularBuffer buffer, int value)
  * @param CircularBuffer buffer
  * @return CircularBuffer
  */
-CircularBuffer operator+(int value, CircularBuffer buffer)
+CircularBuffer& operator+(int value, CircularBuffer &buffer)
 {
     return buffer + value;
 }
@@ -275,7 +275,7 @@ CircularBuffer operator+(int value, CircularBuffer buffer)
  * @param Element element
  * @return CircularBuffer
  */
-CircularBuffer operator+(CircularBuffer buffer, Element element)
+CircularBuffer& operator+(CircularBuffer &buffer, Element element)
 {
     buffer += element;
     return buffer;
@@ -287,7 +287,7 @@ CircularBuffer operator+(CircularBuffer buffer, Element element)
  * @param CircularBuffer buffer
  * @return CircularBuffer
  */
-CircularBuffer operator+(Element element, CircularBuffer buffer)
+CircularBuffer& operator+(Element element, CircularBuffer &buffer)
 {
     return buffer + element;
 }

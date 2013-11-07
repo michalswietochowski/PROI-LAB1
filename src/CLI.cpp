@@ -9,6 +9,7 @@
 #include <iostream>
 #include <limits>
 #include "CLI.h"
+#include "CircularBufferTest.h"
 
 /**
  * Set buffer object
@@ -88,16 +89,12 @@ void CLI::showMenu()
     
     do {
         clearScreen();
-        Element element;
-        buffer = 159 + buffer;
-        buffer >> element;
-//        buffer << 15;
-        cout << "Test: " << element.intVal << endl;
         cout << "Circular Buffer" << endl << endl;
         cout << buffer << endl << endl;
         cout << "1. Add element to buffer" << endl;
         cout << "2. Get first element from buffer" << endl;
         cout << "3. Clear buffer" << endl;
+        cout << "9. Test CircularBuffer class" << endl;
         cout << "0. Exit" << endl << endl;
         cout << "Choose option: ";
         cin >> choice;
@@ -113,6 +110,11 @@ void CLI::showMenu()
                 break;
             case 3:
                 clearBuffer();
+                break;
+            case 9:
+                CircularBuffer testBuffer(BUFFER_SIZE);
+                CircularBufferTest tester(testBuffer);
+                tester.runTests();
                 break;
         }
     } while (choice);

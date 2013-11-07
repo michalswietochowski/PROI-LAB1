@@ -20,7 +20,7 @@ TARGET=$(BINDIR)/cb
 
 # settings
 CXXFLAGS=-g
-SOURCES=$(SRCDIR)/main.cpp $(SRCDIR)/CLI.cpp $(SRCDIR)/CircularBuffer.cpp
+SOURCES=$(SRCDIR)/main.cpp $(SRCDIR)/CLI.cpp $(SRCDIR)/CircularBuffer.cpp $(SRCDIR)/CircularBufferTest.cpp
 
 all: $(TARGET)
 
