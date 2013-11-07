@@ -65,7 +65,7 @@ void CLI::showMenu()
     do {
         clearScreen();
         cout << "Circular Buffer" << endl << endl;
-        cout << buffer.toString() << endl << endl;
+        cout << buffer << endl << endl;
         cout << "1. Add element to buffer" << endl;
         cout << "2. Get first element from buffer" << endl;
         cout << "3. Clear buffer" << endl;

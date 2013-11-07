@@ -84,4 +84,6 @@ public:
     string toString();
 };
 
+ostream & operator<< (ostream &output, CircularBuffer &buffer);
+
 #endif /* defined(__PROI_LAB1__CircularBuffer__) */

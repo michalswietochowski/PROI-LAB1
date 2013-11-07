@@ -168,3 +168,8 @@ string CircularBuffer::toString()
     
     return bufferAsString;
 }
+
+ostream & operator<< (ostream &output, CircularBuffer &buffer)
+{
+    return output << buffer.toString();
+}
