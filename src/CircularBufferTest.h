@@ -10,6 +10,7 @@
 #define __PROI_LAB1__CircularBufferTest__
 
 #include <iostream>
+#include <limits>
 #include "CircularBuffer.h"
 
 const unsigned int BUFFER_SIZE = 10;

@@ -17,7 +17,7 @@ CircularBuffer::CircularBuffer(int size)
     this->size = size;
     this->start = 0;
     this->count = 0;
-    this->elements = (Element *)calloc(this->size, sizeof(Element));
+    this->elements = new Element[this->size];
 }
 
 /**
@@ -60,8 +60,10 @@ void CircularBuffer::clear()
 {
     this->start = 0;
     this->count = 0;
-    free(this->elements);
-    this->elements = (Element *)calloc(this->size, sizeof(Element));
+
+    for (int i = 0; i < this->size; i++) {
+        this->elements[i].intVal = 0;
+    }
 }
 
 /**

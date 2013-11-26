@@ -10,6 +10,7 @@
 #define __PROI_LAB1__CircularBuffer__
 
 #include <cstdlib>
+#include <cstdio>
 #include <iostream>
 #include <string>
 

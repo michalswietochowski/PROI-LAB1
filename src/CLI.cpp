@@ -30,7 +30,8 @@ void CLI::addElement()
     cout << "Enter an integer and press Enter: " << flush;
     int result = 0;
     do {
-        result = (cin >> element.intVal);
+	cin >> element.intVal;
+        result = cin.good();
         
         if (!result) {
             cin.clear();
